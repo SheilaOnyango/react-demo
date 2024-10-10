@@ -1,0 +1,16 @@
+name: Hello Workflow
+
+# Trigger the workflow on every push to the repository
+on:
+  push:
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Say hello
+        run: echo "Hello! A new commit has been pushed."
